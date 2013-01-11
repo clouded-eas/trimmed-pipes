@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
   laddr.sin_port = htons((unsigned short) atol(argv[2]));
   laddr.sin_addr.s_addr = inet_addr(argv[1]);
   if (!laddr.sin_port) {
-    fprintf(stderr, "unbale to listed on %s:port\n");
+    fprintf(stderr, "unable to listen on %s:port\n");
     return 20;
   }
   if (laddr.sin_addr.s_addr == ADDR_NULLIFY) {
